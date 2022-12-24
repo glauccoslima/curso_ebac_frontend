@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #F0F8FF;
+    color: #000000;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #086bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+form {
+    max-width: 360px;
+}
+
+form button {
+    max-width: 120px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:focus-visible {
+    outline: 2px dashed blue;
+    outline-offset: 2px;
+}
+
+button:hover,
+button:focus {
+    background: #005ae1
+}
+
+input:focus,
+textarea:focus {
+    outline-color: #005ae1;
+}
+
+.validation-message {
+    display: block;
+    padding-top: 0.4em;
+    color: red;
+}
+
+label.error {
+    font-size: 13px;
+    color: red;
+    padding-left: 8px;
+}
