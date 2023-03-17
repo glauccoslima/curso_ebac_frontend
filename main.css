@@ -1,3 +1,4 @@
+/* Define estilos para todos os elementos da página */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* Define estilos para o corpo da página */
 body {
     background-color: #F0F8FF;
     color: #000000;
@@ -13,20 +15,24 @@ body {
     justify-content: center;
 }
 
+/* Define um contêiner com largura máxima de 1024 pixels e centralizado na página */
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
+/* Define estilos para seções da página, com um preenchimento de 48 pixels no topo e na parte inferior */
 section {
     padding: 48px 0;
 }
 
+/* Define estilos para os títulos das seções */
 section h2 {
     margin-bottom: 16px;
 }
 
+/* Define estilos para botões na página */
 button {
     display: block;
     width: 100%;
@@ -40,15 +46,18 @@ button {
     border-radius: 6px;
 }
 
+/* Define estilos para campos de formulário na página */
 .form-campo {
     margin-bottom: 16px;
 }
 
+/* Define estilos para rótulos de campos de formulário */
 .form-campo label {
     font-weight: bold;
     display: block;
 }
 
+/* Define estilos para campos de entrada e caixas de texto em formulários */
 .form-campo input,
 .form-campo textarea {
     width: 100%;
@@ -56,57 +65,69 @@ button {
     padding: 8px;
 }
 
+/* Define estilos para caixas de texto em formulários */
 .form-campo textarea {
     resize: none;
     height: 120px;
 }
 
+/* Define estilos para formulários */
 form {
     max-width: 360px;
 }
 
+/* Define estilos para botões dentro de formulários */
 form button {
     max-width: 120px;
 }
 
+/* Define estilos para itens de lista no rodapé da página */
 footer li {
     list-style: none;
     margin-left: 16px;
 }
 
+/* Define estilos para imagens em itens de lista no rodapé da página */
 footer li img {
     height: 32px;
 }
 
+/* Define estilos para campos de entrada inválidos em formulários */
 input:invalid {
     border-color: red;
 }
 
+/* Define estilos para botões quando estão com foco */
 button:focus {
     outline: none;
 }
 
+/* Define estilos para botões quando estão com foco visível */
 button:focus-visible {
     outline: 2px dashed blue;
     outline-offset: 2px;
 }
 
+/* Define estilos para botões quando o mouse está sobre eles ou quando estão com foco */
 button:hover,
 button:focus {
     background: #005ae1
 }
 
+/* Define estilos para campos de entrada e caixas de texto quando estão com foco */
 input:focus,
 textarea:focus {
     outline-color: #005ae1;
 }
 
+/* Define estilos para mensagens de validação em formulários */
 .validation-message {
     display: block;
     padding-top: 0.4em;
     color: red;
 }
 
+/* Define estilos para rótulos de erro em formulários */
 label.error {
     font-size: 13px;
     color: red;
