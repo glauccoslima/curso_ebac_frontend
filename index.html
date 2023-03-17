@@ -2,23 +2,31 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Define a codificação de caracteres do documento, a compatibilidade com o IE, a escala inicial e o título da página -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <!-- Define links para fontes do Google e folhas de estilo CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="main.css">
+    <!-- Define links para folhas de estilo CSS do Slick Slider e bibliotecas de scripts do jQuery -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
+    <!-- Define uma seção para o formulário de contato -->
     <section id="contato">
+        <!-- Define um contêiner para o formulário -->
         <div class="container">
+            <!-- Define um título para o formulário -->
             <h2>Entre em contato</h2>
+            <!-- Define um formulário com um ID para referência em scripts -->
             <form id="meuFormulario">
+                <!-- Define campos do formulário com rótulos -->
                 <div class="form-campo">
                     <label for="nome">Nome completo:</label>
                     <input type="text" name="nome" id="nome">
@@ -43,10 +51,12 @@
                     <label for="endereco">Endereço completo:</label>
                     <input type="text" name="endereco" id="endereco" minlength="7" />
                 </div>
+                <!-- Define um botão de envio do formulário -->
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
+    <!-- Define links para bibliotecas de scripts do jQuery, jQuery Mask e jQuery Validate, além de um script personalizado -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
