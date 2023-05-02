@@ -1,9 +1,9 @@
 @fontePrincipal: Roboto, sans-serif;
 @fonteDoTitulo: Lobster, cursive;
 @corDoTexto: #fff;
-@corDeFundo: #eb3b5a;
+@corDeFundo: #3beb7f;
 @corDoTextoDoBotao: #000;
-@cordoFundoDoBotao: #f7b731;
+@cordoFundoDoBotao: #0eff05;
 
 body {
     background-color: @corDeFundo;
@@ -34,6 +34,10 @@ button {
     background-color: @cordoFundoDoBotao;
     color: @corDoTextoDoBotao;
     font-family: @fontePrincipal;
+}
+
+button:active {
+    transform: scale(0.85);
 }
 
 input {
