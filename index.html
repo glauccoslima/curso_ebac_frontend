@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Definindo a codificação de caracteres para o documento -->
+    <meta charset="UTF-8">
+    <!-- Definindo o modo de compatibilidade do IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Definindo a viewport para tornar o site responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Meu Github</title>
+    <!-- Importando a folha de estilo externa -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- Imagem do avatar do perfil -->
+            <img class="profile-avatar" src="https://via.placeholder.com/180x180" id="avatar" alt=".">
+            <!-- Nome do perfil -->
+            <h1 class="profile-name" id="name"></h1>
+            <!-- Nome de usuário do perfil -->
+            <h2 class="profile-username" id="username"></h2>
+            <ul class="numbers">
+                <!-- Número de repositórios -->
+                <li class="numbers-item">
+                    <h4>Repositórios</h4> <span id="repos"></span>
+                </li>
+                <!-- Número de seguidores -->
+                <li class="numbers-item">
+                    <h4>Seguidores</h4> <span id="followers"></span>
+                </li>
+                <!-- Número de usuários que o perfil está seguindo -->
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="following"></span>
+                </li>
+            </ul>
+            <!-- Link para o perfil no Github -->
+            <a href="#" id="link" class="profile-link">Ver no Github</a>
+        </div>
+    </header>
+
+    <script>
+        // Evento para aguardar o carregamento completo do DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            // Selecionando elementos do DOM
+            const nameElement = document.querySelector('#name');
+            const usernameElement = document.querySelector('#username');
+            const avatarElement = document.querySelector('#avatar');
+            const reposElement = document.querySelector('#repos');
+            const followersElement = document.querySelector('#followers');
+            const followingElement = document.querySelector('#following');
+            const linkElement = document.querySelector('#link');
+
+            // Realizando a requisição para a API do GitHub
+            fetch('https://api.github.com/users/glauccoslima')
+                .then(function (res) {
+                    // Convertendo a resposta em JSON
+                    return res.json();
+                })
+                .then(function (json) {
+                    // Atualizando os elementos do DOM com os dados recebidos
+                    nameElement.innerText = json.name;
+                    usernameElement.innerText = json.login;
+                    avatarElement.src = json.avatar_url;
+                    followingElement.innerText = json.following;
+                    followersElement.innerText = json.followers;
+                    reposElement.innerText = json.public_repos;
+                    linkElement.href = json.html_url;
+                })
+        })
+    </script>
+</body>
+
+</html>
