@@ -8,7 +8,7 @@
 }
 
 .btnPesquisar {
-  background-color: var(--cor-principal);
+  background-color: var(--cor-Botao);
   border: 1px solid var(--cor-principal);
   height: 40px;
   padding: 0 16px;
@@ -16,6 +16,16 @@
   color: var(--cor-secundaria);
   margin-left: 8px;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+.btnPesquisar:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+}
+
+.btnPesquisarClicked {
+  outline: 3px dotted var(--cor-Botao); /* 3px de largura, estilo com pontinhos. */
 }
 
 .campo {

@@ -1,42 +1,48 @@
+/* Estilos para o contêiner da vaga */
 .vaga {
-  border: 1px solid var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
-  padding: 16px;
-  transition: all ease .3s;
-  border-radius: 8px;
+  border: 1px solid var(--cor-principal); /* Borda com cor principal */
+  background-color: var(--cor-secundaria); /* Cor de fundo secundária */
+  color: var(--cor-principal); /* Cor do texto principal */
+  padding: 16px; /* Espaçamento interno */
+  transition: all ease 0.3s; /* Transição suave para todos os efeitos de hover */
+  border-radius: 8px; /* Cantos arredondados */
 }
 
+/* Estilos para o título da vaga */
 .vagaTitulo {
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-weight: bold; /* Texto em negrito */
+  margin-bottom: 16px; /* Margem inferior para separar do conteúdo seguinte */
 }
 
+/* Estilos para o link de detalhes da vaga */
 .vagaLink {
-  border-color: var(--cor-secundaria);
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
-    display: inline-block;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin-top: 16px;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 8px;
-    text-align: center;
+  border-color: var(--cor-secundaria); /* Cor da borda secundária */
+  background-color: var(--cor-Botao); /* Cor de fundo do botão */
+  color: var(--cor-secundaria); /* Cor do texto secundária */
+  display: inline-block; /* Display em linha */
+  padding: 8px 16px; /* Espaçamento interno */
+  text-decoration: none; /* Remove a sublinha do link */
+  margin-top: 16px; /* Margem superior */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 14px; /* Tamanho da fonte */
+  border-radius: 8px; /* Cantos arredondados */
+  text-align: center; /* Alinhamento centralizado do texto */
 
-    @media (max-width: 768px) {
-      display: block;
-    }
+  /* Estilos específicos para telas menores que 768px */
+  @media (max-width: 768px) {
+    display: block; /* Display em bloco */
+  }
 }
 
+/* Estilos para o hover do contêiner da vaga */
 .vaga:hover {
-  background-color: var(--cor-principal);
-  color: var(--cor-secundaria);
+  background-color: var(--cor-Botao); /* Cor de fundo do botão ao passar o mouse */
+  color: var(--cor-secundaria); /* Cor do texto secundária ao passar o mouse */
 }
 
+/* Estilos para o hover do link dentro da vaga */
 .vaga:hover a {
-  border-color: var(--cor-principal);
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
+  border-color: var(--cor-principal); /* Cor da borda principal ao passar o mouse */
+  background-color: var(--cor-secundaria); /* Cor de fundo secundária ao passar o mouse */
+  color: var(--cor-principal); /* Cor do texto principal ao passar o mouse */
 }

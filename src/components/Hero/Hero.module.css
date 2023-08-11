@@ -1,41 +1,36 @@
 .form {
-  height: 360px;
-  width: 100%;
-  background-image: url('https://cdn.pixabay.com/photo/2018/08/10/15/45/woman-3597101_1280.jpg');
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
+  height: 360px; /* Altura fixa para desktop */
+  width: 100%; /* Ocupa toda a largura disponível */
+  background-image: url('https://github.com/glauccoslima/servidor_estaticos/blob/main/img110823.jpg?raw=true'); /* Imagem de fundo */
+  background-size: cover; /* Faz com que a imagem de fundo cubra todo o espaço disponível */
+  position: relative; /* Define uma posição relativa para posicionar elementos internos */
+  display: flex; /* Usa flexbox para alinhar elementos filhos */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
 }
 
-.form::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--cor-principal);
-  content: '';
-  opacity: 0.7;
-}
-
+/* Define estilos para a div dentro do Hero, usada como contêiner para o título */
 .form div {
-  position: relative;
-  color: #eee;
+  position: relative; /* Posição relativa dentro do pai flex */
+  color: #ffffff; /* Cor de texto branca */
 }
 
+/* Estilos para o título principal dentro do Hero */
 .heroTitle {
-  font-family: Gloock, serif;
-  font-size: 48px;
+  font-family: Gloock, serif; /* Define a família da fonte */
+  font-size: 48px; /* Tamanho da fonte para desktop */
+  background-color: rgba(30, 30, 30, 0.6); /* Fundo semi-transparente */
+  color: #fff; /* Cor de texto branca */
+  padding: 1rem; /* Espaçamento em torno do texto */
 }
 
+/* Regras de mídia para responsividade em telas menores (até 768px) */
 @media (max-width: 768px) {
   .form {
-    height: auto;
-    padding: 24px 0;
+    height: auto; /* Altura automática para dispositivos móveis */
+    padding: 24px 0; /* Espaçamento adicional para dispositivos móveis */
   }
 
   .heroTitle {
-    font-size: 32px;
+    font-size: 32px; /* Tamanho de fonte reduzido para dispositivos móveis */
   }
 }

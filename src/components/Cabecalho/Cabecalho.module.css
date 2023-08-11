@@ -1,7 +1,7 @@
+/* Estilos para o cabeçalho da página */
 .cabecalho {
-  background-color: var(--cor-secundaria);
-  color: var(--cor-principal);
-  text-align: center;
-  padding: 24px 0;
+  background-color: var(--cor-secundaria); /* Cor de fundo secundária para o cabeçalho */
+  color: var(--cor-principal); /* Cor de texto principal para o cabeçalho */
+  text-align: center; /* Alinha o texto ao centro do cabeçalho */
+  padding: 24px 0; /* Adiciona um preenchimento vertical de 24px e horizontal de 0 */
 }
-

@@ -1,13 +1,23 @@
+/* Classe que estiliza a lista de vagas usando uma grade */
 .vagas {
+  /* Configurando o layout da grade para ter três colunas iguais */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  /* Definindo o espaço entre as colunas */
   column-gap: 16px;
+
+  /* Definindo o espaço entre as linhas */
   row-gap: 16px;
+
+  /* Adicionando uma margem superior para separar da seção anterior */
   margin-top: 32px;
 }
 
+/* Regra de mídia para ajustar o layout em telas menores (menos de 768px de largura) */
 @media (max-width: 768px) {
   .vagas {
+    /* Mudando o layout da grade para uma única coluna em telas pequenas */
     grid-template-columns: 1fr;
   }
 }
