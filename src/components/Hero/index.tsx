@@ -7,9 +7,9 @@ const Hero = () => (
   <section className={styles.form}>
     <div className="container">
       {/* Utiliza um elemento h1 para exibir o título principal */}
-      <h1 className={styles.heroTitle}>
+      <h2 className={styles.heroTitle}>
         As melhores vagas para tecnologia, design e artes visuais.
-      </h1>
+      </h2>
     </div>
   </section>
 )
