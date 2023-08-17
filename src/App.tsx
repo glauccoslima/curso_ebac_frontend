@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
+import { Provider } from 'react-redux'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
-
 import { GlobalStyle } from './styles'
+import { store } from './store'
 
+// Definição do tipo para um objeto de jogo
 export type Game = {
   id: number
   titulo: string
@@ -15,31 +17,18 @@ export type Game = {
 }
 
 function App() {
-  const [games, setGames] = useState<Game[]>([])
-  const [carrinho, setCarrinho] = useState<Game[]>([])
-
-  useEffect(() => {
-    fetch('http://localhost:4000/produtos')
-      .then((res) => res.json())
-      .then((res) => setGames(res))
-  }, [])
-
-  function adicionarAoCarrinho(jogo: Game) {
-    if (carrinho.find((game) => game.id === jogo.id)) {
-      alert('Item já adicionado')
-    } else {
-      setCarrinho([...carrinho, jogo])
-    }
-  }
-
   return (
-    <>
+    // Provendo a store do Redux para os componentes descendentes
+    <Provider store={store}>
+      {/* Aplicando estilos globais */}
       <GlobalStyle />
       <div className="container">
-        <Header itensNoCarrinho={carrinho} />
-        <Produtos jogos={games} adicionarAoCarrinho={adicionarAoCarrinho} />
+        {/* Renderizando o cabeçalho da aplicação */}
+        <Header />
+        {/* Renderizando a lista de produtos */}
+        <Produtos />
       </div>
-    </>
+    </Provider>
   )
 }
 
